@@ -13,7 +13,7 @@ import { abi } from '../contract-abi';
 import FlipCard, { BackCard, FrontCard } from '../components/FlipCard';
 
 const contractConfig = {
-  address: '0x86fbbb1254c39602a7b067d5ae7e5c2bdfd61a30',
+  address: '0xd1F506A2cdc8ca2f24bdFDFa23292293a117B9A3',
   abi,
 } as const;
 
@@ -65,9 +65,9 @@ const Home: NextPage = () => {
         <div style={{ flex: '1 1 auto' }}>
           <div style={{ padding: '24px 24px 24px 0' }}>
             <h1>NFT Demo Mint</h1>
-            <p style={{ margin: '12px 0 24px' }}>
+            {/* <p style={{ margin: '12px 0 24px' }}>
               {Number(totalMinted)} minted so far!
-            </p>
+            </p> */}
             <ConnectButton />
 
             {mintError && (
