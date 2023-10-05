@@ -52,7 +52,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
   [publicProvider()]
 );
 
-const projectId = 'YOUR_PROJECT_ID';
+const projectId = 'f49c0a9791ae4e1caf93cad739a5d56e';
 
 const { wallets } = getDefaultWallets({
   appName: 'RainbowKit Mint NFT Demo',
