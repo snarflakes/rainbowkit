@@ -51,11 +51,11 @@ const Home: NextPage = () => {
     hash: mintData?.hash,
   });
 
-  React.useEffect(() => {
-    if (totalSupplyData) {
-      setTotalMinted(totalSupplyData);
-    }
-  }, [totalSupplyData]);
+  // React.useEffect(() => {
+  //   if (totalSupplyData) {
+  //     setTotalMinted(totalSupplyData);
+  //   }
+  // }, [totalSupplyData]);
 
   const isMinted = txSuccess;
 
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
           <div style={{ padding: '24px 24px 24px 0' }}>
             <h1>NFT Demo Mint</h1>
             {* <p style={{ margin: '12px 0 24px' }}>
-              {Number(totalMinted)} minted so far!
+              {Number(totalSupplyData)} minted so far!
             </p> */}
             <ConnectButton />
 
