@@ -66,9 +66,9 @@ const Home: NextPage = () => {
         <div style={{ flex: '1 1 auto' }}>
           <div style={{ padding: '24px 24px 24px 0' }}>
             <h1>NFT Demo Mint</h1>
-            {* <p style={{ margin: '12px 0 24px' }}>
+            <p style={{ margin: '12px 0 24px' }}>
               {/* {Number(totalMinted)} minted so far! */}
-            </p> */}
+            </p>
             <ConnectButton />
 
             {mintError && (
