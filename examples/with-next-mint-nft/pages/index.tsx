@@ -85,7 +85,8 @@ const Home: NextPage = () => {
             {isConnected && !isMinted && (
               <button
                 style={{ marginTop: 24 }}
-                disabled={!mint || isMintLoading || isMintStarted}
+                disabled={//!mint || isMintLoading || isMintStarted}
+                  isMintLoading || isMintStarted}
                 className="button"
                 data-mint-loading={isMintLoading}
                 data-mint-started={isMintStarted}
