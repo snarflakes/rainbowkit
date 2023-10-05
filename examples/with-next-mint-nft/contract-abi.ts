@@ -1,173 +1,176 @@
 export const abi = [
   {
-    "name": "Transfer",
-    "inputs": [
+    inputs: [],
+    name: "Transfer",
+    type: "event",
+    anonymous: false,
+    indexed: true,
+    inputs: [
       {
-        "name": "recipient",
-        "type": "address",
-        "indexed": true
+        name: "recipient",
+        type: "address",
+        indexed: true,
       },
       {
-        "name": "amount",
-        "type": "uint256",
-        "indexed": false
-      }
+        name: "amount",
+        type: "uint256",
+        indexed: false,
+      },
     ],
-    "anonymous": false,
-    "type": "event"
   },
   {
-    "stateMutability": "nonpayable",
-    "type": "constructor",
-    "inputs": [
+    stateMutability: "nonpayable",
+    type: "constructor",
+    inputs: [
       {
-        "name": "tokenAddress",
-        "type": "address"
-      }
+        name: "tokenAddress",
+        type: "address",
+      },
     ],
-    "outputs": []
+    outputs: [],
   },
   {
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "name": "setRecipients",
-    "inputs": [
+    stateMutability: "nonpayable",
+    type: "function",
+    name: "setRecipients",
+    inputs: [
       {
-        "name": "_recipients",
-        "type": "address[100]"
+        name: "_recipients",
+        type: "address[100]",
       },
       {
-        "name": "count",
-        "type": "uint256"
-      }
+        name: "count",
+        type: "uint256",
+      },
     ],
-    "outputs": [],
-    "gas": 3560726
+    outputs: [],
+    gas: 3560726,
   },
   {
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "name": "setAmountsAndProbabilities",
-    "inputs": [
+    stateMutability: "nonpayable",
+    type: "function",
+    name: "setAmountsAndProbabilities",
+    inputs: [
       {
-        "name": "_amounts",
-        "type": "uint256[4]"
+        name: "_amounts",
+        type: "uint256[4]",
       },
       {
-        "name": "_probabilities",
-        "type": "uint256[4]"
-      }
+        name: "_probabilities",
+        type: "uint256[4]",
+      },
     ],
-    "outputs": [],
-    "gas": 289572
+    outputs: [],
+    gas: 289572,
   },
   {
-    "stateMutability": "nonpayable",
-    "type": "function",
-    "name": "sendFunds",
-    "inputs": [],
-    "outputs": [],
-    "gas": 6812187
+    stateMutability: "nonpayable",
+    type: "function",
+    name: "sendFunds",
+    inputs: [],
+    outputs: [],
+    gas: 6812187,
   },
   {
-    "stateMutability": "view",
-    "type": "function",
-    "name": "owner",
-    "inputs": [],
-    "outputs": [
+    stateMutability: "view",
+    type: "function",
+    name: "owner",
+    inputs: [],
+    outputs: [
       {
-        "name": "",
-        "type": "address"
-      }
+        name: "",
+        type: "address",
+      },
     ],
-    "gas": 2478
+    gas: 2478,
   },
   {
-    "stateMutability": "view",
-    "type": "function",
-    "name": "recipients",
-    "inputs": [
+    stateMutability: "view",
+    type: "function",
+    name: "recipients",
+    inputs: [
       {
-        "name": "arg0",
-        "type": "uint256"
-      }
+        name: "arg0",
+        type: "uint256",
+      },
     ],
-    "outputs": [
+    outputs: [
       {
-        "name": "",
-        "type": "address"
-      }
+        name: "",
+        type: "address",
+      },
     ],
-    "gas": 2553
+    gas: 2553,
   },
   {
-    "stateMutability": "view",
-    "type": "function",
-    "name": "amounts",
-    "inputs": [
+    stateMutability: "view",
+    type: "function",
+    name: "amounts",
+    inputs: [
       {
-        "name": "arg0",
-        "type": "uint256"
-      }
+        name: "arg0",
+        type: "uint256",
+      },
     ],
-    "outputs": [
+    outputs: [
       {
-        "name": "",
-        "type": "uint256"
-      }
+        name: "",
+        type: "uint256",
+      },
     ],
-    "gas": 2583
+    gas: 2583,
   },
   {
-    "stateMutability": "view",
-    "type": "function",
-    "name": "probabilities",
-    "inputs": [
+    stateMutability: "view",
+    type: "function",
+    name: "probabilities",
+    inputs: [
       {
-        "name": "arg0",
-        "type": "uint256"
-      }
+        name: "arg0",
+        type: "uint256",
+      },
     ],
-    "outputs": [
+    outputs: [
       {
-        "name": "",
-        "type": "uint256"
-      }
+        name: "",
+        type: "uint256",
+      },
     ],
-    "gas": 2613
+    gas: 2613,
   },
   {
-    "stateMutability": "view",
-    "type": "function",
-    "name": "recipient_count",
-    "inputs": [],
-    "outputs": [
+    stateMutability: "view",
+    type: "function",
+    name: "recipient_count",
+    inputs: [],
+    outputs: [
       {
-        "name": "",
-        "type": "uint256"
-      }
+        name: "",
+        type: "uint256",
+      },
     ],
-    "gas": 2598
+    gas: 2598,
   },
   {
-    "stateMutability": "view",
-    "type": "function",
-    "name": "last_claimed",
-    "inputs": [
+    stateMutability: "view",
+    type: "function",
+    name: "last_claimed",
+    inputs: [
       {
-        "name": "arg0",
-        "type": "address"
-      }
+        name: "arg0",
+        type: "address",
+      },
     ],
-    "outputs": [
+    outputs: [
       {
-        "name": "",
-        "type": "uint256"
-      }
+        name: "",
+        type: "uint256",
+      },
     ],
-    "gas": 2843
-  }
+    gas: 2843,
+  },
 ] as const;
+
 
 
 
