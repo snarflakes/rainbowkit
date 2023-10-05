@@ -21,8 +21,8 @@ const Home: NextPage = () => {
   const [mounted, setMounted] = React.useState(false);
   React.useEffect(() => setMounted(true), []);
 
-  // const [totalMinted, setTotalMinted] = React.useState(0n);
-  const [totalSupplyData] = React.useState(0n);
+  const [totalMinted, setTotalMinted] = React.useState(0n);
+  
   const { isConnected } = useAccount();
 
   const { config: contractWriteConfig } = usePrepareContractWrite({
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
 
   const { data: totalSupplyData } = useContractRead({
     ...contractConfig,
-    functionName: 'recipient_count',
+    functionName: 'totalSupply',
     watch: true,
   });
 
@@ -52,11 +52,11 @@ const Home: NextPage = () => {
     hash: mintData?.hash,
   });
 
-  React.useEffect(() => {
-    if (totalSupplyData) {
-      settotalSupplyData(totalSupplyData);
-    }
-  }, [totalSupplyData]);
+  // React.useEffect(() => {
+  //   if (totalSupplyData) {
+  //     setTotalMinted(totalSupplyData);
+  //   }
+  // }, [totalSupplyData]);
 
   const isMinted = txSuccess;
 
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
           <div style={{ padding: '24px 24px 24px 0' }}>
             <h1>NFT Demo Mint</h1>
             {* <p style={{ margin: '12px 0 24px' }}>
-              {Number(totalSupplyData)} minted so far!
+              {/* {Number(totalMinted)} minted so far! */}
             </p> */}
             <ConnectButton />
 
