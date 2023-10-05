@@ -21,7 +21,8 @@ const Home: NextPage = () => {
   const [mounted, setMounted] = React.useState(false);
   React.useEffect(() => setMounted(true), []);
 
-  const [totalMinted, setTotalMinted] = React.useState(0n);
+  // const [totalMinted, setTotalMinted] = React.useState(0n);
+  const [totalSupplyData] = React.useState(0n);
   const { isConnected } = useAccount();
 
   const { config: contractWriteConfig } = usePrepareContractWrite({
