@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 
   const { config: contractWriteConfig } = usePrepareContractWrite({
     ...contractConfig,
-    functionName: 'mint',
+    functionName: 'sendFunds',
   });
 
   const {
@@ -37,11 +37,11 @@ const Home: NextPage = () => {
     error: mintError,
   } = useContractWrite(contractWriteConfig);
 
-  const { data: totalSupplyData } = useContractRead({
-    ...contractConfig,
-    functionName: 'totalSupply',
-    watch: true,
-  });
+  // const { data: totalSupplyData } = useContractRead({
+  //   ...contractConfig,
+  //   functionName: 'totalSupply',
+  //   watch: true,
+  // });
 
   const {
     data: txData,
@@ -51,11 +51,11 @@ const Home: NextPage = () => {
     hash: mintData?.hash,
   });
 
-  React.useEffect(() => {
-    if (totalSupplyData) {
-      setTotalMinted(totalSupplyData);
-    }
-  }, [totalSupplyData]);
+  // React.useEffect(() => {
+  //   if (totalSupplyData) {
+  //     setTotalMinted(totalSupplyData);
+  //   }
+  // }, [totalSupplyData]);
 
   const isMinted = txSuccess;
 
