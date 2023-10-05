@@ -1,10 +1,8 @@
 export const abi = [
   {
-    inputs: [],
     name: "Transfer",
     type: "event",
     anonymous: false,
-    indexed: true,
     inputs: [
       {
         name: "recipient",
@@ -170,7 +168,6 @@ export const abi = [
     gas: 2843,
   },
 ] as const;
-
 
 
 
