@@ -52,11 +52,11 @@ const Home: NextPage = () => {
     hash: mintData?.hash,
   });
 
-  // React.useEffect(() => {
-  //   if (totalSupplyData) {
-  //     setTotalMinted(totalSupplyData);
-  //   }
-  // }, [totalSupplyData]);
+  React.useEffect(() => {
+    if (totalSupplyData) {
+      settotalSupplyData(totalSupplyData);
+    }
+  }, [totalSupplyData]);
 
   const isMinted = txSuccess;
 
