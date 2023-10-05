@@ -39,7 +39,7 @@ const rinkeby: Chain = {
 };
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [mainet, polygon],
+  [mainnet, polygon],
   [publicProvider()]
 );
 
