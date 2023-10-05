@@ -38,11 +38,11 @@ const Home: NextPage = () => {
     error: mintError,
   } = useContractWrite(contractWriteConfig);
 
-  const { data: totalSupplyData } = useContractRead({
-    ...contractConfig,
-    functionName: 'totalSupply',
-    watch: true,
-  });
+  // const { data: totalSupplyData } = useContractRead({
+  //   ...contractConfig,
+  //   functionName: 'totalSupply',
+  //   watch: true,
+  // });
 
   const {
     data: txData,
