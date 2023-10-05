@@ -4,7 +4,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import type { NextPage } from 'next';
 import {
   useAccount,
-  useContractRead,
+//  useContractRead,
   useContractWrite,
   usePrepareContractWrite,
   useWaitForTransaction,
@@ -18,8 +18,8 @@ const contractConfig = {
 } as const;
 
 const Home: NextPage = () => {
-  const [mounted, setMounted] = React.useState(false);
-  React.useEffect(() => setMounted(true), []);
+  //const [mounted, setMounted] = React.useState(false);
+  //React.useEffect(() => setMounted(true), []);
 
   // const [totalMinted, setTotalMinted] = React.useState(0n);
   
