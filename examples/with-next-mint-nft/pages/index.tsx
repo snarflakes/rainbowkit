@@ -82,7 +82,7 @@ const Home: NextPage = () => {
               </p>
             )}
 
-            {mounted && isConnected && !isMinted && (
+            {isConnected && !isMinted && (
               <button
                 style={{ marginTop: 24 }}
                 disabled={!mint || isMintLoading || isMintStarted}
