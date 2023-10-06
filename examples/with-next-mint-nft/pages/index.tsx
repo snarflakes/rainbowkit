@@ -25,7 +25,7 @@ const Home: NextPage = () => {
     functionName: 'sendFunds',
   });
 
-  const { write: mint, isSuccess } = useContractWrite(config)
+  const { write: mint, isSuccess } = useContractWrite(contractWriteConfig)
     
   return (
     <div className="page">
