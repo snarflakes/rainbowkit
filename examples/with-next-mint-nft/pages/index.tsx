@@ -45,7 +45,7 @@ const Home: NextPage = () => {
                 className="button"
                 onClick={() => sendFunds?.()}
               >
-              
+              MinFunds
               </button>
             )}
           </div>
