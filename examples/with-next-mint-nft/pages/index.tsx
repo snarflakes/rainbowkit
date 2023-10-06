@@ -25,7 +25,7 @@ const Home: NextPage = () => {
     functionName: 'sendFunds',
   });
 
-  const { write: mint, isSuccess } = useContractWrite(contractWriteConfig)
+  const { write: sendFunds, isSuccess } = useContractWrite(contractWriteConfig)
     
   return (
     <div className="page">
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
               <button
                 style={{ marginTop: 24 }} 
                 className="button"
-                onClick={() => mint?.()}
+                onClick={() => sendFunds?.()}
               >
               
               </button>
