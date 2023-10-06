@@ -4,12 +4,11 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import type { NextPage } from 'next';
 import {
   useAccount,
-//  useContractRead,
   useContractWrite,
   usePrepareContractWrite,
   useWaitForTransaction,
 } from 'wagmi';
-import contractInterface from '../contract-abi';
+import contractInterface from '../contract-abi.json';
 import FlipCard, { BackCard, FrontCard } from '../components/FlipCard';
 
 
