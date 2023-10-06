@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   const { isConnected } = useAccount();
 
   const { config } = usePrepareContractWrite({
-    adressOrName: '0xd1F506A2cdc8ca2f24bdFDFa23292293a117B9A3',
+    addressOrName: '0xd1F506A2cdc8ca2f24bdFDFa23292293a117B9A3',
     contractInterface: contractInterface,
     functionName: 'sendFunds'
   });
