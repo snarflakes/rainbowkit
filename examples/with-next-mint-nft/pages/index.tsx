@@ -8,17 +8,21 @@ import {
   usePrepareContractWrite,
   useWaitForTransaction,
 } from 'wagmi';
-import contractInterface from '../contract-abi.ts';
+//import contractInterface from '../contract-abi.ts';
+import { abi } from '../contract-abi';
 import FlipCard, { BackCard, FrontCard } from '../components/FlipCard';
 
+const contractConfig = {
+  address: '0xd1F506A2cdc8ca2f24bdFDFa23292293a117B9A3',
+  abi,
+} as const;
 
 const Home: NextPage = () => {
   const { isConnected } = useAccount();
 
-  const { config } = usePrepareContractWrite({
-    addressOrName: '0xd1F506A2cdc8ca2f24bdFDFa23292293a117B9A3',
-    contractInterface: contractInterface,
-    functionName: 'sendFunds'
+  const { config: contractWriteConfig } = usePrepareContractWrite({
+    ...contractConfig,
+    functionName: 'sendFunds',
   });
 
   const { write: mint, isSuccess } = useContractWrite(config)
@@ -41,7 +45,7 @@ const Home: NextPage = () => {
                 className="button"
                 onClick={() => mint?.()}
               >
-                Mint
+              
               </button>
             )}
           </div>
