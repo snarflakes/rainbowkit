@@ -8,7 +8,7 @@ import {
   usePrepareContractWrite,
   useWaitForTransaction,
 } from 'wagmi';
-import contractInterface from '../contract-abi.json';
+import contractInterface from '../contract-abi.ts';
 import FlipCard, { BackCard, FrontCard } from '../components/FlipCard';
 
 
