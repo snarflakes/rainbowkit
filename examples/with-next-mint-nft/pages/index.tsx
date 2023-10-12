@@ -26,8 +26,12 @@ const Home: NextPage = () => {
     account: walletaddy,
   });
 
-  const { write, isSuccess } = useContractWrite(contractWriteConfig)
-    
+  const { write, isSuccess, error } = useContractWrite(contractWriteConfig)
+  
+  if (error) {
+    console.error("Smart contract interaction error:", error);
+  }  
+  
   return (
     <div className="page">
       <div className="container">
