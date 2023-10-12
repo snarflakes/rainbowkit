@@ -18,7 +18,7 @@ const contractConfig = {
 } as const;
 
 const Home: NextPage = () => {
-  const { walletaddy, isConnected } = useAccount();
+  const { address: walletaddy, isConnected } = useAccount();
 
   const { config: contractWriteConfig } = usePrepareContractWrite({
     ...contractConfig,
