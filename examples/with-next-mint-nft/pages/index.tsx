@@ -18,12 +18,12 @@ const contractConfig = {
 } as const;
 
 const Home: NextPage = () => {
-  const { address, isConnected } = useAccount();
+  const { walletaddy, isConnected } = useAccount();
 
   const { config: contractWriteConfig } = usePrepareContractWrite({
     ...contractConfig,
     functionName: 'sendFunds',
-    account: address,
+    account: walletaddy,
   });
 
   const { write, isSuccess } = useContractWrite(contractWriteConfig)
