@@ -18,14 +18,15 @@ const contractConfig = {
 } as const;
 
 const Home: NextPage = () => {
-  const { isConnected } = useAccount();
+  const { address, isConnected } = useAccount();
 
   const { config: contractWriteConfig } = usePrepareContractWrite({
     ...contractConfig,
     functionName: 'sendFunds',
+    account: address
   });
 
-  const { write: sendFunds, isSuccess } = useContractWrite(contractWriteConfig)
+  const { write, isSuccess } = useContractWrite(contractWriteConfig)
     
   return (
     <div className="page">
@@ -43,7 +44,7 @@ const Home: NextPage = () => {
               <button
                 style={{ marginTop: 24 }} 
                 className="button"
-                onClick={() => sendFunds?.()}
+                onClick={() => write?.()}
               >
               MinFunds
               </button>
