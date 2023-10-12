@@ -23,7 +23,7 @@ const Home: NextPage = () => {
   const { config: contractWriteConfig } = usePrepareContractWrite({
     ...contractConfig,
     functionName: 'sendFunds',
-    account: address
+    account: address,
   });
 
   const { write, isSuccess } = useContractWrite(contractWriteConfig)
