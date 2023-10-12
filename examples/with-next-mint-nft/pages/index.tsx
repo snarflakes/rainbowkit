@@ -44,6 +44,7 @@ const Home: NextPage = () => {
               <button
                 style={{ marginTop: 24 }} 
                 className="button"
+                disabled={!write}
                 onClick={() => write?.()}
               >
               MinFunds
