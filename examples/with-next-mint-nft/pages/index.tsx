@@ -15,6 +15,7 @@ import FlipCard, { BackCard, FrontCard } from '../components/FlipCard';
 const contractConfig = {
   address: '0xd1F506A2cdc8ca2f24bdFDFa23292293a117B9A3',
   abi,
+  functionName: 'sendFunds',
 } as const;
 
 const Home: NextPage = () => {
@@ -22,8 +23,8 @@ const Home: NextPage = () => {
 
   const { config: contractWriteConfig } = usePrepareContractWrite({
     ...contractConfig,
-    functionName: 'sendFunds',
-    account: walletaddy,
+    //functionName: 'sendFunds',
+    //account: walletaddy,
   });
 
   const { write, isSuccess, error } = useContractWrite(contractWriteConfig)
